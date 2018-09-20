@@ -1,8 +1,8 @@
 {
-    "name": "vscode-open-in-sourcetree",
-    "displayName": "Open in SourceTree",
-    "description": "Open project in SourceTree",
-    "repository": "morrislaptop/vscode-open-in-sourcetree",
+    "name": "vscode-open-in-sublime-merge",
+    "displayName": "Open in Sublime Merge",
+    "description": "Open project in Sublime Merge",
+    "repository": "morrislaptop/vscode-open-in-sublime-merge",
     "icon": "1024x1024.png",
     "version": "0.6.0",
     "publisher": "morrislaptop",
@@ -13,25 +13,25 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:openInSourceTree.open"
+        "onCommand:openInSublimeMerge.open"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [
             {
-                "command": "openInSourceTree.open",
-                "title": "Open in SourceTree"
+                "command": "openInSublimeMerge.open",
+                "title": "Open in Sublime Merge"
             }
         ],
         "menus": {
             "explorer/context": [
                 {
-                    "command": "openInSourceTree.open"
+                    "command": "openInSublimeMerge.open"
                 }
             ],
             "editor/title/context": [
                 {
-                    "command": "openInSourceTree.open"
+                    "command": "openInSublimeMerge.open"
                 }
             ]
         }

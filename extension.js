@@ -39,7 +39,7 @@ async function findRelevantPath() {
     }
 }
 
-async function openInSourceTree () {
+async function openInSublimeMerge () {
     try {
         const relevantPath = await findRelevantPath()
 
@@ -47,7 +47,7 @@ async function openInSourceTree () {
 
         const gitPath = await findGitRoot(relevantPath)
 
-        await open(gitPath, { app: 'SourceTree' })
+        await open(gitPath, { app: 'Sublime Merge' })
     }
     catch (err) {
         console.error(err)
@@ -56,7 +56,7 @@ async function openInSourceTree () {
 }
 
 function activate(context) {
-    var disposable = vscode.commands.registerCommand('openInSourceTree.open', openInSourceTree)
+    var disposable = vscode.commands.registerCommand('openInSublimeMerge.open', openInSublimeMerge)
     context.subscriptions.push(disposable)
 }
 
