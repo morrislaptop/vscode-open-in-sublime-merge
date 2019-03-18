@@ -39,6 +39,15 @@ async function findRelevantPath() {
     }
 }
 
+function getAppName()
+{
+    const platforms = {
+        'darwin': 'Sublime Merge',
+    }
+
+    return platforms[process.platform] || 'smerge'
+}
+
 async function openInSublimeMerge () {
     try {
         const relevantPath = await findRelevantPath()
@@ -47,7 +56,7 @@ async function openInSublimeMerge () {
 
         const gitPath = await findGitRoot(relevantPath)
 
-        await open(gitPath, { app: 'Sublime Merge' })
+        await open(gitPath, { app: getAppName() })
     }
     catch (err) {
         console.error(err)
